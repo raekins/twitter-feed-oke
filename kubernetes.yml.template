@@ -30,11 +30,11 @@ spec:
             readOnly: false
       volumes:
         - name: podinfo
-      downwardAPI:
-        items:
-        - path: "labels"
-          fieldRef:
-            fieldPath: metadata.labels
+          downwardAPI:
+            items:
+            - path: "labels"
+              fieldRef:
+                fieldPath: metadata.labels
       imagePullSecrets:
         - name: wercker
 ---
